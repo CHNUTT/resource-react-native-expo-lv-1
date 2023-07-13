@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 
 const styles = StyleSheet.create({
   textStyle: {
@@ -8,7 +8,16 @@ const styles = StyleSheet.create({
 });
 
 const ComponentsScreen = () => {
-  return <Text style={styles.textStyle}>This is the components screen</Text>;
+  const greeting = 'Hello, World!'
+  const SecondLine = <Text>Hello, Cheer!</Text>
+
+  return (
+    <View>
+      <Text style={styles.textStyle}>This is the components screen</Text>
+      <Text>{greeting}</Text>
+      {SecondLine}
+    </View>
+  );
 };
 
 export default ComponentsScreen;
